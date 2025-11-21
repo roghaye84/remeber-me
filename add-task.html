@@ -1,0 +1,86 @@
+<!-- add-task.html (صفحه اضافه کردن ایونت) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhisperNet Features</title>
+
+  <!-- فونت‌ها -->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- استایل -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <!-- لوگو -->
+      <div class="logo">Remember<span>Me</span></div>
+
+      <!-- آیکون منو موبایل -->
+      <span class="menu-toggle material-symbols-outlined">
+        <span class="icon-text">menu</span>
+      </span>
+
+      <!-- منوی دسکتاپ -->
+      <ul class="main-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add-task.html">Add Events</a></li>
+        <li><a href="messge.html" class="bell"><i class="fa-regular fa-bell"></i></a></li>
+      </ul>
+
+      <!-- منوی کناری موبایل -->
+      <ul class="sidebar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add-task.html" class="active">Add Events</a></li>
+        <li><a href="messge.html">Message</a></li>
+      </ul>
+    </nav>
+
+    <!--نوشته بالای فرم ها-->
+    <main class="main">
+      <h2 class="title-task">Add New Events</h2>
+    </main>
+
+    <!--ساختن فرم اولیه برای اضافه کردن تعهد-->
+    <div class="form-container">
+      <form class="task-form" id="event-form">
+        <div class="form-group">
+          <label for="task-title">Name</label>
+          <input type="text" id="task-title" placeholder="e.g Alex Anderson" required>
+        </div>
+        <div class="form-group">
+          <label for="event-type">Event type</label>
+          <select id="event-type" name="event-type" required>
+            <option value="birthday">Birthday</option>
+            <option value="anniversary">Anniversary</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="relation">Relation</label>
+          <select id="relation" name="relation" required>
+            <option value="normal friend">Normal Friend</option>
+            <option value="best friend">Best Friend</option>
+            <option value="colleague">Colleague</option>
+            <option value="wife">Wife</option>
+            <option value="husband">Husband</option>
+            <option value="parent">Parent</option>
+            <option value="girlfriend">Girlfriend</option>
+            <option value="boyfriend">Boyfriend</option>
+            <option value="sibling">Sibling</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="task-date">Date</label>
+          <input type="date" id="task-date" required>
+        </div>
+        <button type="submit" class="add-task">Save Event</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
